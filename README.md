@@ -1,2 +1,2 @@
 # todo
- A basic todo list application
+ A basic todo list website
