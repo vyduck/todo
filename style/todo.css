@@ -1,28 +1,7 @@
-body {
-    font-size: 24px;
-    font-family: "Century Gothic", Century;
-
-    background-color: #f5e7c8;
-
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-
-    display: flex;
-    justify-content: center;
-
-    line-height: 1.6;
-}
-
-main {
-    padding: 10px;
-    width: 500px;
-}
-
 #tasks {
-    font-size: 16px;
+    font-size: 14px;
     color: #636363;
+    margin-bottom: 2rem;
 }
 
 #taskInput{ 
@@ -32,13 +11,12 @@ main {
 input#newTask {
     margin: 20px 5px;
     padding: 7px 3px;
-    background-color: #f5e7c8;
 
     width: calc(100% - 95px);
 
     border: none;
     border-bottom: 2px solid rgb(32, 32, 32);
-    font-size: 24px;
+    font-size: 16px;
 
     outline: none;
 }
@@ -52,9 +30,9 @@ input#newTask {
 }
 
 p.task {
-    font-size: 16px;
-    margin: 10px 0px;
-    padding: 15px;
+    font-size: 14px;
+    margin: 5px 0px;
+    padding: 10px;
     border: 1px solid grey;
     border-radius: 5px;
     text-align: justify;

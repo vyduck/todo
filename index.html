@@ -4,48 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo</title>
+    <title>Todo | Vyankatesh Dande</title>
 
-    <link rel="stylesheet" href="./style.css">
-    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style/todo.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="./javascript/index.js" defer></script>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-png">
 </head>
 
 <body>
-    <main>
-        <div id="taskInput">
-            <input type="text" name="newTask" id="newTask" placeholder="Task" onkeyup="processInput">
-            <button id="add" onclick="add()">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="48" height="48"
-                    stroke-width="1" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor">
-                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                    <path d="M9 12h6"></path>
-                    <path d="M12 9v6"></path>
-                </svg>
-            </button>
-        </div>
-        <div id="tasks">
-        </div>
-    </main>
-
-    <script>
-        async function registerServiceWorker() {
-            if ("serviceWorker" in navigator) {
-                try {
-                    const registration = await navigator.serviceWorker.register(
-                        "sw.js"
-                    );
-                    console.log(
-                        "Service Worker registered with scope:",
-                        registration.scope
-                    );
-                } catch (error) {
-                    console.error("Service Worker registration failed:", error);
-                }
-            }
-        }
-
-        registerServiceWorker();
-    </script>
+    <section>
+        <nav>
+            <a href="/">
+                <img src="./logo.png" alt="" srcset="" height="32">
+            </a>
+            <a href="/blog">Blog</a>
+        </nav>
+        <header>
+            <p id="page-title">
+                Todo
+            </p>
+            <p id="page-descriptor">
+                I built this to-do list app as a student project and use it to manage my tasks and stay organized!
+            </p>
+        </header>
+        <main>
+            <div id="taskInput">
+                <input type="text" name="newTask" id="newTask" placeholder="Task">
+                <button id="add" onclick="add()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="48" height="48"
+                        stroke-width="1" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor">
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                        <path d="M9 12h6"></path>
+                        <path d="M12 9v6"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="tasks">
+            </div>
+        </main>
+        <footer>
+            Check out this project on Github <a href="https://github.com/vyduck/todo">here</a>. <br>
+        </footer>
+    </section>
 </body>
 
 </html>

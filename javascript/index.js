@@ -17,20 +17,11 @@ function showTasks() {
         taskP.classList.add("task");
         taskP.addEventListener("click", (ev) => {
             localStorage.removeItem(key);
+            if (localStorage.length == 1) localStorage.setItem("nextIndex", 1);
             showTasks();
         })
         taskContainer.appendChild(taskP);
     };
-}
-
-if (typeof Storage) {
-    showTasks();
-} else {
-    alert("Your browser does not support local storage, which is required to run this website.")
-}
-
-function processInput(value) {
-    alert(value);
 }
 
 document.getElementById("newTask").addEventListener("keyup", (ev) => {
@@ -40,8 +31,11 @@ document.getElementById("newTask").addEventListener("keyup", (ev) => {
 function add() {
     let nextIndex = localStorage.getItem("nextIndex");
     const taskElement = document.getElementById("newTask");
+    if (taskElement.value.trim() == "") return;
     localStorage.setItem("nextIndex", Number(nextIndex) + 1);
-    localStorage.setItem(nextIndex, taskElement.value);
+    localStorage.setItem(nextIndex, taskElement.value.trim());
     taskElement.value = "";
     showTasks()
 }
+
+showTasks()
